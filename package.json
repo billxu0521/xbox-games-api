@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pazguille/xbox-games-api.git"
+    "url": "git+https://github.com/billxu0521/xbox-games-api.git"
   },
   "author": "Guille Paz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pazguille/xbox-games-api/issues"
+    "url": "https://github.com/billxu0521/xbox-games-api/issues"
   },
-  "homepage": "https://github.com/pazguille/wxbox-games-api#readme",
+  "homepage": "https://github.com/billxu0521/wxbox-games-api#readme",
   "dependencies": {
     "axios": "^0.24.0",
     "joi": "^17.4.1",
