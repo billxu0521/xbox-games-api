@@ -10,8 +10,7 @@
         "src": "/(.*)",
         "dest": "index.js"
       }
-  ]
-  },
+  ],
   "rewrites": [
     {
       "source": "/api/image/:path*",
