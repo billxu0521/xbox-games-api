@@ -5,6 +5,7 @@ function fetchDetailFromMS(ids, store, lang) {
     market: store,
     languages: lang,
     bigIds: ids.join(','),
+    'ms-cv':'0000000',
   }})
   .then(response => response.data.Products)
   .catch(err => { throw { error: err.response.data.error }; });
