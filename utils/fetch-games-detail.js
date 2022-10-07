@@ -53,7 +53,7 @@ async function fetchGamesDetail(ids, store, lang) {
         description: game.LocalizedProperties[0].ProductDescription,
         // images: groupBy(game.LocalizedProperties[0].Images.map(img => ({ url: `https:${img.Uri.replace('store-images.s-microsoft.com', 'api.xstoregames.com/api')}`, width: img.Width, height: img.Height, type: img.ImagePurpose.toLowerCase() })), 'type'),
         // Use vercel domain to Edge Caching
-        images: groupBy(game.LocalizedProperties[0].Images.map(img => ({ url: `https:${img.Uri.replace('store-images.s-microsoft.com', 'xbox-games-api-1s4z.vercel.app')}`, width: img.Width, height: img.Height, type: img.ImagePurpose.toLowerCase() })), 'type'),
+        images: groupBy(game.LocalizedProperties[0].Images.map(img => ({ url: `https:${img.Uri.replace('store-images.s-microsoft.com', 'xbox-games-api-1s4z.vercel.app/api')}`, width: img.Width, height: img.Height, type: img.ImagePurpose.toLowerCase() })), 'type'),
         // related: game.MarketProperties[0].RelatedProducts.map(r => ({ id: r.RelatedProductId, type: r.RelationshipType })),
       };
 
