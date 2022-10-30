@@ -3,6 +3,7 @@ const games = require('../api/games');
 const gamepass = require('../api/gamepass');
 const search = require('../api/search');
 const news = require('../api/news');
+const newnews = require('../api/newnews');
 const videos = require('../api/videos');
 const image = require('../api/image');
 const cors = require('cors');
@@ -42,6 +43,7 @@ app.get('/api/games', cors(corsOptions),games);
 app.get('/api/gamepass', cors(corsOptions),gamepass);
 app.get('/api/search', cors(corsOptions), search);
 app.get('/api/news', cors(corsOptions),news);
+app.get('/api/newnews', cors(corsOptions),newnews);
 app.get('/api/videos',cors(corsOptions), videos);
 app.get('/api/image(/:path*)?', cors(corsOptions), image);
 app.get('/', cors(corsOptions), (req, res, next) => {

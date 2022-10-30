@@ -39,10 +39,13 @@ async function fetchGamesDetail(ids, store, lang) {
         developer: game.LocalizedProperties[0].DeveloperName,
         publisher: game.LocalizedProperties[0].PublisherName,
         release_date: game.MarketProperties[0].OriginalReleaseDate,
+        supportedlanguages : game.DisplaySkuAvailabilities[0].Sku.MarketProperties[0].SupportedLanguages,
         ea_play: game.LocalizedProperties[0]?.EligibilityProperties?.Affirmations.find(a => a.AffirmationId === 'B0HFJ7PW900M') ? true : false,
         game_pass: game.LocalizedProperties[0]?.EligibilityProperties?.Affirmations.find(a => a.AffirmationId === '9WNZS2ZC9L74') ? true : false,
         gold_deal: game.LocalizedProperties[0]?.EligibilityProperties?.Affirmations.find(a => a.AffirmationId === '9RVBF5P99P15') ? true : false,
         demo: game.Properties.IsDemo ? true : false,
+        category: game.Properties.Category,
+        attributes: game.Properties.Attributes,
         sold_separately: game.DisplaySkuAvailabilities[0].Availabilities[0].Actions.includes('Purchase'),
         price: {
           amount: game.DisplaySkuAvailabilities[0].Availabilities[0].OrderManagementData.Price.MSRP,
